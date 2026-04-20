@@ -122,6 +122,3 @@ npm install
 # Run frontend
 npm run dev
 
-# Run Electron app
-cd ..
-npm run electron
