@@ -113,7 +113,7 @@ The app simulates real-world cyber scenarios like phishing, password security, b
 
 ```bash
 # Clone repository
-git clone https://github.com/your-username/cyber-security-app.git
+git clone https://github.com/soheibdev/Csense-.git
 
 # Install dependencies
 cd frontend
