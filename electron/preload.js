@@ -1,9 +1,3 @@
-/**
- * preload.js — Secure Bridge between Renderer and Main Process
- *
- * Only explicitly whitelisted APIs are exposed via contextBridge.
- * The renderer NEVER gets direct access to Node.js or Electron internals.
- */
 
 const { contextBridge, ipcRenderer } = require('electron');
 

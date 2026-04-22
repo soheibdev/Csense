@@ -1,0 +1,49 @@
+.login-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #EFEDED;
+}
+.login-form{
+    display: flex;
+    width: 450px;
+    flex-direction: column;
+    background-color: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.logo{
+    width: 600px;
+    height: 140px;
+    margin-bottom: 70px;
+    margin-right: 20px;
+}
+h1{
+    text-align: center;
+    font-size: 32px;
+    font-weight: 163px;
+    color: #212121 !important;
+   margin-bottom: 30px;
+}
+.btn-login{
+  margin-top: 10px;
+  padding: 20px;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 54px;
+}
+.input-pass::placeholder{
+    letter-spacing: 2px;
+    font-size: 16px;
+    font-weight: 300;
+    color: #757575;
+}
+.input-email::placeholder{
+    letter-spacing: 0.5px;
+    font-size: 16px;
+    font-weight: 300;
+    color: #757575;
+}

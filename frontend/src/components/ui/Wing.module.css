@@ -1,0 +1,11 @@
+.wing-logo{
+  position: fixed;
+  bottom: 1px;
+  right: -100px;
+  z-index: 999;
+  pointer-events: none;
+}
+.wing-logo img {
+  width: 525px;
+  height: 500px;
+}

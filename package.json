@@ -4,14 +4,16 @@
   "description": "CSense – Cybersecurity Awareness Platform",
   "main": "electron/main.js",
   "scripts": {
-    "dev": "concurrently -k \"npm run vite\" \"npm run electron:dev\"",
     "vite": "vite --config frontend/vite.config.js",
-    "electron:dev": "cross-env NODE_ENV=development electron .",
-    "build": "vite build --config frontend/vite.config.js",
-    "electron:build": "npm run build && electron-builder",
-    "preview": "vite preview --config frontend/vite.config.js"
+    "electron": "electron .",
+    "dev": "concurrently \"npm run vite\" \"cross-env NODE_ENV=development electron .\""
   },
-  "keywords": ["electron", "react", "vite", "cybersecurity"],
+  "keywords": [
+    "electron",
+    "react",
+    "vite",
+    "cybersecurity"
+  ],
   "author": "CSense Team",
   "license": "MIT",
   "devDependencies": {
@@ -20,7 +22,9 @@
     "cross-env": "^7.0.3",
     "electron": "^31.0.0",
     "electron-builder": "^24.13.3",
-    "vite": "^5.3.1"
+    "electron-devtools-installer": "^4.0.0",
+    "vite": "^5.3.1",
+    "wait-on": "^9.0.5"
   },
   "dependencies": {
     "react": "^18.3.1",

@@ -1,0 +1,7 @@
+.global-button{
+    color: white;
+    background-color: #1976D2;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 20px;
+}
