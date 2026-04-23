@@ -1,16 +1,13 @@
 import { create } from 'zustand';
 
-/**
- * useAppStore — global Zustand store.
- *
- * Add slices (auth, ui, notifications…) by composing additional
- * create() calls or using the Zustand slice pattern.
- */
 const useAppStore = create((set) => ({
-  // ── User slice ────────────────────────────────────────────────────────────
+
   user: null,
+  accessToken: null,
+  refreshToken: null,
+  setAuth: (user, accessToken, refreshToken) => set({ user, accessToken, refreshToken }),
   setUser: (user) => set({ user }),
-  clearUser: () => set({ user: null }),
+  clearUser: () => set({ user: null, accessToken: null, refreshToken: null }),
 
   // ── UI slice ──────────────────────────────────────────────────────────────
   sidebarOpen: false,
