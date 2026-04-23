@@ -4,11 +4,15 @@ import Style from  './Login.module.css'
 import logo from '../assets/logo.svg'
 import Wingg from '../components/ui/Wing'
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
+
 export default function Login(){
     const [inputData , setinputData]=useState({
         email:"",
         pass:""
     })
+    const navigate = useNavigate()
+
     function handelemailchange(e){
         setinputData({
             ...inputData,
@@ -20,6 +24,9 @@ export default function Login(){
             ...inputData,
            pass:e.target.value
         })
+    }
+    function handelsubmit(){
+        navigate('/topics')
     }
     return(
     <div className={Style['login-page']}>
@@ -34,7 +41,7 @@ export default function Login(){
             <div className={Style['input-group']}>
                 <Input className={Style['input-pass']}  type="password" placeholder="••••••••••••••••••••••" label="Password" value={inputData.pass} onChange={handelpasschange}/>
             </div>
-              <Button className={Style['btn-login']} name="Sign in" />
+              <Button className={Style['btn-login']} name="Sign in" onClick={handelsubmit}/>
         </div>
         <Wingg/>
     </div>
