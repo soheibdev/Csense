@@ -110,7 +110,7 @@ Admins can:
 
 ---
 # Clone repository
-git clone https://github.com/your-username/csense.git
+git clone https://github.com/soheibdev/csense.git
 
 # Install dependencies
 npm install
