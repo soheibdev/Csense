@@ -38,17 +38,18 @@ function createWindow() {
 
 // App ready
 app.whenReady().then(async () => {
-  if (isDev) {
-    try {
-      const { default: installExtension, REACT_DEVELOPER_TOOLS } = require("electron-devtools-installer");
-      await installExtension(REACT_DEVELOPER_TOOLS, {
-        loadExtensionOptions: { allowFileAccess: true },
-      });
-      console.log("React DevTools installed successfully");
-    } catch (err) {
-      console.log("DevTools install error:", err);
-    }
-  }
+  // React DevTools installation is disabled because it causes errors in newer Electron versions
+  // if (isDev) {
+  //   try {
+  //     const { default: installExtension, REACT_DEVELOPER_TOOLS } = require("electron-devtools-installer");
+  //     await installExtension(REACT_DEVELOPER_TOOLS, {
+  //       loadExtensionOptions: { allowFileAccess: true },
+  //     });
+  //     console.log("React DevTools installed successfully");
+  //   } catch (err) {
+  //     console.log("DevTools install error:", err);
+  //   }
+  // }
 
   createWindow();
 

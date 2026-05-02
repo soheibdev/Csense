@@ -1,0 +1,62 @@
+.option{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 120px;
+    background-color: #ffff;
+    border-radius: 8px;
+    padding: 20px 24px 20px 24px;
+    border: 1px solid #757575;
+    gap: 3px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+.option:hover {
+    border-color: #1976D2;
+}
+.selected {
+    border-color: #1976D2;
+    background-color: #F0F6FF;
+}
+.optionNumber{
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #D9D9D9;
+    transition: all 0.2s ease-in-out;
+}
+.selectedNumber {
+    background-color: #1976D2;
+}
+.selectedNumber .optionNumberText {
+    color: white;
+}
+.description{
+    font-size: 18px;
+    font-weight: 400;
+    font-style: Regular;
+    line-height: 100%;
+    margin-top: 10px;
+    color: #212121 !important;
+}
+.correct {
+    border-color: #388E3C;
+}
+.correctNumber {
+    background-color: #388E3C;
+}
+.correctNumber .optionNumberText {
+    color: white;
+}
+.wrong {
+    border-color: #D32F2F;
+}
+.wrongNumber {
+    background-color: #FFCDD2;
+}
+.wrongNumber .optionNumberText {
+    color: white;
+}

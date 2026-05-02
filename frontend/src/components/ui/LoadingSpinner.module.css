@@ -1,0 +1,26 @@
+.loadingContainer {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #EFEDED;
+    gap: 24px;
+}
+.spinner {
+    width: 260px;
+    height: 260px;
+}
+.loadingMessage {
+    font-size: 18px;
+    font-weight: 600;
+    color: #616161;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+}

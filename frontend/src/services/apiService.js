@@ -36,6 +36,17 @@ export const apiService = {
       body: JSON.stringify({ email, password }),
     });
   },
+  logout: async () => {
+    return await request('/auth/logout', {
+      method: 'POST',
+    });
+  },
+  createAdminUser: async (userData) => {
+    return await request('/admin/users', {
+      method: 'POST',
+      body: JSON.stringify(userData),
+    });
+  }
 };
 
 export default apiService;

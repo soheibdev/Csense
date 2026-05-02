@@ -1,0 +1,29 @@
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 50px;
+    margin-left: 50px;  
+}
+.area {
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-end; 
+  width: 775px;
+}
+
+.appShell {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #EFEDED;
+}
+.mainArea {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-width: 0;
+}
+

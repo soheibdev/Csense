@@ -1,0 +1,62 @@
+.topbar {
+  height: 100px;
+  min-height: 60px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 28px;
+  flex-shrink: 0;
+  width: 100%;
+
+}
+
+.topbarRight {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 50px;
+}
+
+.iconBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  margin: 0 !important;
+  align-self: center !important;
+  position: relative !important;
+  top: 0 !important;
+}
+
+.iconBtn:hover {
+  background: #f1f5f9;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #dbeafe;
+  border: 2px solid #93c5fd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.iconnotification {
+  width: 35px;
+  height: 35px;
+  margin: 0 !important;
+  display: block !important;
+  position: relative !important;
+  top: 5px !important;
+}

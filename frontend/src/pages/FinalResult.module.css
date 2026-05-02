@@ -1,0 +1,172 @@
+.appShell {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: #EFEDED;
+}
+.mainArea {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    min-width: 0;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    padding: 32px 36px;
+    background: #EFEDED;
+    background-image: none;
+}
+
+/* ── Hero Card ── */
+.heroCard {
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 48px;
+    text-align: center;
+    border: 1px solid #E0E0E0;
+    margin-bottom: 24px;
+}
+.heroIcon {
+    font-size: 56px;
+    margin-bottom: 16px;
+    animation: bounceIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+@keyframes bounceIn {
+    0% { transform: scale(0); opacity: 0; }
+    60% { transform: scale(1.2); }
+    100% { transform: scale(1); opacity: 1; }
+}
+.heroTitle {
+    font-size: 32px;
+    font-weight: 700;
+    color: #212121;
+    margin-bottom: 8px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.heroSubtitle {
+    font-size: 16px;
+    color: #616161;
+    max-width: 600px;
+    margin: 0 auto 24px;
+    line-height: 1.5;
+}
+.scoreBadge {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 40px;
+    border-radius: 16px;
+    gap: 4px;
+}
+.scorePassed {
+    background: #DCFCE7;
+}
+.scoreFailed {
+    background: #FEE2E2;
+}
+.scoreNumber {
+    font-size: 42px;
+    font-weight: 800;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.scorePassed .scoreNumber { color: #16A34A; }
+.scoreFailed .scoreNumber { color: #DC2626; }
+.scoreLabel {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.scorePassed .scoreLabel { color: #16A34A; }
+.scoreFailed .scoreLabel { color: #DC2626; }
+
+/* ── Stats Row ── */
+.statsRow {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+}
+.statCard {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    border-radius: 12px;
+    padding: 20px 24px;
+    flex: 1;
+    min-width: 180px;
+}
+.statIcon {
+    font-size: 28px;
+}
+.statValue {
+    font-size: 22px;
+    font-weight: 700;
+    color: #212121;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.statLabel {
+    font-size: 13px;
+    color: #757575;
+}
+
+/* ── Badges Section ── */
+.badgesSection {
+    margin-bottom: 32px;
+}
+.sectionTitle {
+    font-size: 22px;
+    font-weight: 700;
+    color: #212121;
+    margin-bottom: 16px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.badgesGrid {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* ── Actions ── */
+.actionsRow {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 48px;
+}
+.retryBtn {
+    padding: 14px 32px;
+    border-radius: 100px;
+    border: 1px solid #1765DC;
+    background: transparent;
+    color: #1765DC;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.retryBtn:hover {
+    background: #F0F6FF;
+}
+.finishBtn {
+    padding: 14px 32px;
+    border-radius: 100px;
+    border: none;
+    background: #1765DC;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.finishBtn:hover {
+    background: #155bb5;
+}

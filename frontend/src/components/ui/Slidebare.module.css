@@ -1,0 +1,52 @@
+.sidebar {
+  width: 320px;
+  min-width: 220px;
+  height: 100vh;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.sidebarLogo {
+  padding: 24px 1px 20px;
+  margin-bottom: 25px;
+}
+
+.logoImg {
+  height: 70px;
+  width: 300px;
+  object-fit: contain;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 10px;
+  gap: 2px;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #64748b !important;
+  cursor: pointer;
+  transition: background 0.15s;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.navItem:hover {
+  background: #f8fafc;
+  color: #1e1e1e !important;
+}
+
+.navActive {
+  background: #eff6ff !important;
+  color: #2563eb !important;
+}

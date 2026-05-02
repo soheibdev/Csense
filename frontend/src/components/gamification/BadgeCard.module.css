@@ -1,0 +1,94 @@
+.badge {
+    position: relative;
+    background: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    border-radius: 16px;
+    padding: 28px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 200px;
+    min-height: 200px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.unlocked {
+    border-color: #1765DC;
+    box-shadow: 0 4px 20px rgba(23, 101, 220, 0.12);
+}
+
+.unlocked:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(23, 101, 220, 0.18);
+}
+
+.locked {
+    opacity: 0.55;
+    filter: grayscale(0.6);
+}
+
+/* ── Icon ── */
+.iconWrapper {
+    position: relative;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+}
+
+.icon {
+    font-size: 40px;
+    line-height: 1;
+    z-index: 1;
+}
+
+.glowRing {
+    position: absolute;
+    inset: -6px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(23, 101, 220, 0.15) 0%, transparent 70%);
+    animation: glowPulse 2.5s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+    0%, 100% { transform: scale(1); opacity: 0.6; }
+    50% { transform: scale(1.15); opacity: 1; }
+}
+
+/* ── Text ── */
+.name {
+    font-size: 15px;
+    font-weight: 700;
+    color: #212121;
+    margin-bottom: 6px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.desc {
+    font-size: 12px;
+    color: #757575;
+    line-height: 1.4;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* ── Lock overlay ── */
+.lockOverlay {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+/* ── Unlock animation ── */
+.animateIn {
+    animation: badgeUnlock 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes badgeUnlock {
+    0% { transform: scale(0.5); opacity: 0; }
+    60% { transform: scale(1.1); }
+    100% { transform: scale(1); opacity: 1; }
+}

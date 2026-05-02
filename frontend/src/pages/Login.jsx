@@ -7,8 +7,10 @@ import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import useAppStore from "../store/useAppStore"
 import apiService from "../services/apiService"
+import LoadingSpinner from "../components/ui/LoadingSpinner"
 
 export default function Login() {
+
     const navigate = useNavigate();
     const setAuth = useAppStore((state) => state.setAuth);
 
@@ -38,7 +40,7 @@ export default function Login() {
         setError(null);
         try {
             const data = await apiService.login(inputData.email, inputData.pass);
-            
+
             if (data.success) {
                 const { user, accessToken, refreshToken } = data.data;
                 setAuth(user, accessToken, refreshToken);
@@ -46,15 +48,26 @@ export default function Login() {
                 localStorage.setItem("refreshToken", refreshToken);
                 localStorage.setItem("user", JSON.stringify(user));
 
-                navigate("/dashboard");
+                // Add a small delay for transition effect
+                setTimeout(() => {
+                    if (user.role === 'admin') {
+                        navigate("/dashboard");
+                    } else {
+                        navigate("/what-is-csense");
+                    }
+                }, 1000);
             } else {
                 setError(data.message || "Invalid email or password");
+                setIsLoading(false);
             }
         } catch (err) {
             setError("Invalid email or password");
-        } finally {
             setIsLoading(false);
         }
+    }
+
+    if (isLoading) {
+        return <LoadingSpinner message="Signing in..." />;
     }
 
     return (
@@ -64,16 +77,18 @@ export default function Login() {
             </>
             <div className={Style['login-form']}>
                 <h1>Sign in</h1>
-                {error && <p style={{ color: 'red', fontSize: '14px', marginBottom: '10px' }}>{error}</p>}
+
+    { error && <p style={{ color: 'red', fontSize: '14px', marginBottom: '10px' }}>{error}</p> }
                 <div className={Style['input-group']}>
                     <Input className={Style['input-email']} type="email" placeholder="name@company.co" label="Email Address" value={inputData.email} onChange={handelemailchange} />
                 </div>
                 <div className={Style['input-group']}>
                     <Input className={Style['input-pass']} type="password" placeholder="••••••••••••••••••••••" label="Password" value={inputData.pass} onChange={handelpasschange} />
                 </div>
-                <Button className={Style['btn-login']} name={isLoading ? "Signing in..." : "Sign in"} onClick={handleSubmit} disabled={isLoading} />
-            </div>
-            <Wingg />
-        </div>
+                <Button className={Style['btn-login']} name="Sign in" onClick={handleSubmit} />
+            </div >
+        <Wingg />
+        </div >
     )
+
 }
